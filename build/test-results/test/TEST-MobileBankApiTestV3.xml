@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="MobileBankApiTestV3" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-04-07T04:27:09" hostname="WIN-DRVT168G51C" time="9.044">
+  <properties/>
+  <testcase name="shouldReturnDemoAccounts()" classname="MobileBankApiTestV3" time="9.044"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
