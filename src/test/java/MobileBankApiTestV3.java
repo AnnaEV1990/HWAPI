@@ -1,5 +1,5 @@
 import io.restassured.http.ContentType;
-import org.hamcrest.Matchers;
+import io.restassured.response.ValidatableResponse;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
@@ -10,7 +10,7 @@ class MobileBankApiTestV3 {
     void shouldReturnDemoAccounts() {
         // Given - When - Then
         // Предусловия
-        given()
+        ValidatableResponse rub = given()
                 .baseUri("http://localhost:9999/api/v1")
                 // Выполняемые действия
                 .when()
@@ -22,7 +22,6 @@ class MobileBankApiTestV3 {
                 .contentType(ContentType.JSON)
                 .body("", hasSize(3))
                 .body("[0].currency", equalTo("RUB"))
-                .body("[0].balance", greaterThanOrEqualTo(0))
-        ;
+                .body("[0].balance", greaterThanOrEqualTo(0));
     }
 }
